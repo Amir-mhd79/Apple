@@ -1,0 +1,2184 @@
+$xxl: 1400px;
+$xl: 1200px;
+$lg: 992px;
+$md: 768px;
+$sm: 576px;
+@mixin media($value) {
+  @if ($value==$xxl) {
+    @media screen and (min-width: $xxl) {
+      body {
+        > header {
+          width: 100%;
+          height: 44px;
+          background-color: #323233fc;
+          position: fixed;
+          z-index: 10;
+          > nav {
+            width: inherit;
+            height: inherit;
+            > ul {
+              width: 1024px;
+              height: inherit;
+              display: flex;
+              justify-content: space-between;
+              margin: 0 auto;
+              padding: 0 22px;
+              > li.hidden {
+                display: none;
+              }
+              > li {
+                width: fit-content;
+                height: inherit;
+                > a {
+                  display: block;
+                  height: inherit;
+                  padding: 0 8px;
+                }
+              }
+            }
+          }
+        }
+        %advertisement {
+          width: 100%;
+          height: 600px;
+          background-position: center;
+          background-repeat: no-repeat;
+          cursor: pointer;
+        }
+        %flexbox-1 {
+          display: flex;
+          justify-content: end;
+          align-items: center;
+          flex-direction: column;
+        }
+        %flexbox-2 {
+          width: 300px;
+          display: flex;
+          justify-content: space-evenly;
+          margin-top: 10px;
+        }
+        %link-1 {
+          color: #2997ff;
+          font-size: 21px;
+          font-weight: 400;
+        }
+        > main {
+          width: 100%;
+          > div.iphone14 {
+            background-image: url(../images/hero_iphone14__fjmsqstr1ceq_large.jpg);
+            @extend %advertisement;
+            > div.text1 {
+              width: 100%;
+              height: 190px;
+              @extend %flexbox-1;
+              > h1 {
+                @include heading(56px, 700);
+              }
+              > h2 {
+                @include heading(28px, 400);
+              }
+              > div.text2 {
+                @extend %flexbox-2;
+                > a {
+                  @extend %link-1;
+                  &:hover {
+                    text-decoration: underline;
+                  }
+                  > i {
+                    font-size: 19px;
+                  }
+                }
+              }
+            }
+          }
+          > div.gift {
+            background-image: url(../images/hero_endframe__8xosbwdvpaqe_large.jpg);
+            margin-top: 12px;
+            @extend %advertisement;
+            > div {
+              @extend %flexbox-1;
+              height: 530px;
+              color: whitesmoke;
+              > h2 {
+                @include heading(52px, 600);
+              }
+              > h3 {
+                @include heading(28px, 400);
+                margin-bottom: 10px;
+              }
+              > a {
+                @extend %link-1;
+                &:hover {
+                  text-decoration: underline;
+                }
+                > i {
+                  font-size: 19px;
+                }
+              }
+            }
+          }
+          > div.watch-s8 {
+            background-image: url(../images/hero_apple_watch_series_8__bjc1ok5mkjua_large.jpg);
+            @extend %advertisement;
+            margin-top: 12px;
+            > div.text1 {
+              width: 100%;
+              height: 210px;
+              @extend %flexbox-1;
+              > h2 {
+                @include heading(28px, 400);
+                color: whitesmoke;
+                margin-top: 10px;
+              }
+              > div.text2 {
+                @extend %flexbox-2;
+                > a {
+                  @extend %link-1;
+                  &:hover {
+                    text-decoration: underline;
+                  }
+                  > i {
+                    font-size: 19px;
+                  }
+                }
+              }
+            }
+          }
+          > div.grid-1 {
+            width: 98.5%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 600px 600px 600px;
+            gap: 12px;
+            > div.grid-items {
+              @extend %advertisement;
+              margin-top: 12px;
+              margin-left: 12px;
+              > div.text1 {
+                width: 100%;
+                height: 170px;
+                @extend %flexbox-1;
+                > h1 {
+                  @include heading(40px, 600);
+                  color: whitesmoke;
+                }
+                > h2 {
+                  @include heading(21px, 400);
+                  color: whitesmoke;
+                }
+                > div.text2 {
+                  @extend %flexbox-2;
+                  > a {
+                    @extend %link-1;
+                    &:hover {
+                      text-decoration: underline;
+                    }
+                    > i {
+                      font-size: 19px;
+                    }
+                  }
+                }
+              }
+            }
+            > div.item-1 {
+              background-image: url(../images/promo_iphone14pro__4n4twj56fzmu_large.jpg);
+            }
+            > div.item-2 {
+              background-image: url(../images/promo_ipad__fioegapg12qi_large.jpg);
+              > div.text1 > h1 {
+                color: black;
+              }
+              > div.text1 > h2 {
+                color: black;
+              }
+            }
+            > div.item-3 {
+              background-image: url(../images/promo_apple_watch_ultra__gnsqulvdc4a6_large.jpg);
+              > div.text1 > h1 {
+                color: black;
+              }
+              > div.text1 > h2 {
+                color: black;
+                margin-top: 10px;
+              }
+            }
+            > div.item-4 {
+              background-image: url(../images/promo_airpods_pro_avail__gaxggskofx6y_large.jpg);
+            }
+            > div.item-5 {
+              background-image: url(../images/promo_macbookair__fywl7i82fueu_large.png);
+              > div.text1 > h1 {
+                color: black;
+              }
+              > div.text1 > h2 {
+                color: black;
+                margin-top: 10px;
+              }
+            }
+            > div.item-6 {
+              background-image: url(../images/tile__cauwwcyyn9hy_large.jpg);
+              > div.text1 > h1 {
+                color: black;
+              }
+              > div.text1 > h2 {
+                color: black;
+                margin-top: 10px;
+                text-align: center;
+              }
+            }
+          }
+          .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+          }
+          .swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+          .swiper-pagination {
+            position: relative;
+            top: 4px;
+          }
+        }
+        > footer {
+          background-color: #f5f5f7;
+          width: 100%;
+          margin-top: 20px;
+          padding-bottom: 30px;
+          > div.description {
+            width: 980px;
+            height: 170px;
+            padding: 17px 0 11px 0;
+            margin: 0 auto;
+            border-bottom: 1px solid #d2d2d7;
+            > p {
+              color: #939397;
+              font-size: 14px;
+              line-height: 1.33337;
+              font-weight: 400;
+              padding-bottom: 8px;
+              > a {
+                color: #464648;
+                &:hover {
+                  text-decoration: underline;
+                }
+              }
+            }
+          }
+          > div.list-items {
+            width: 980px;
+            margin: 20px auto;
+            display: flex;
+            justify-content: space-between;
+            > div > h3 {
+              font-size: 14px;
+              color: #434345;
+            }
+            > div > ul > li > a {
+              font-size: 12px;
+              color: #68686b;
+              &:hover {
+                text-decoration: underline;
+              }
+            }
+            > div > h3.mt {
+              margin-top: 20px;
+            }
+          }
+          > div.contact {
+            width: 980px;
+            margin: 10px auto;
+            color: #6e6e73;
+            > div.shop {
+              padding-bottom: 10px;
+              border-bottom: 1px solid #d2d2d7;
+              > p {
+                font-size: 14px;
+                > a {
+                  color: #2997ff;
+                  &:hover {
+                    text-decoration: underline;
+                  }
+                }
+              }
+            }
+            div.copyright {
+              display: flex;
+              font-size: 14px;
+              margin-top: 8px;
+              > p.reserved {
+                margin-right: 30px;
+              }
+              > div > a {
+                color: #464648;
+                &:hover {
+                  text-decoration: underline;
+                }
+              }
+              > div > a.border-right {
+                border-right: 1px solid #d2d2d7;
+                padding: 0 10px;
+              }
+              > div > a.ml {
+                margin-left: 10px;
+              }
+              > div > a.country {
+                margin-left: 120px;
+              }
+            }
+          }
+        }
+      }
+    }
+  } @else if ($value==$xl) {
+    @media screen and (min-width: $xl) and (max-width: $xxl) {
+      body {
+        > header {
+          width: 100%;
+          height: 44px;
+          background-color: #323233fc;
+          position: fixed;
+          z-index: 10;
+          > nav {
+            width: inherit;
+            height: inherit;
+            > ul {
+              width: 1024px;
+              height: inherit;
+              display: flex;
+              justify-content: space-between;
+              margin: 0 auto;
+              padding: 0 22px;
+              > li.hidden {
+                display: none;
+              }
+              > li {
+                width: fit-content;
+                height: inherit;
+                > a {
+                  display: block;
+                  height: inherit;
+                  padding: 0 8px;
+                }
+              }
+            }
+          }
+        }
+        > main {
+          width: 100%;
+          > div.iphone14 {
+            background-image: url(../images/hero_iphone14__fjmsqstr1ceq_large.jpg);
+            @include advertisement;
+            > div.text1 {
+              width: 100%;
+              height: 190px;
+              @include flexbox-1;
+              > h1 {
+                @include heading(56px, 700);
+              }
+              > h2 {
+                @include heading(28px, 400);
+              }
+              > div.text2 {
+                @include flexbox-2;
+                > a {
+                  @include link-1;
+                  &:hover {
+                    text-decoration: underline;
+                  }
+                  > i {
+                    font-size: 19px;
+                  }
+                }
+              }
+            }
+          }
+          > div.gift {
+            background-image: url(../images/hero_endframe__8xosbwdvpaqe_large.jpg);
+            margin-top: 12px;
+            @include advertisement;
+            > div {
+              @include flexbox-1;
+              height: 530px;
+              color: whitesmoke;
+              > h2 {
+                @include heading(52px, 600);
+              }
+              > h3 {
+                @include heading(28px, 400);
+                margin-bottom: 10px;
+              }
+              > a {
+                @include link-1;
+                &:hover {
+                  text-decoration: underline;
+                }
+                > i {
+                  font-size: 19px;
+                }
+              }
+            }
+          }
+          > div.watch-s8 {
+            background-image: url(../images/hero_apple_watch_series_8__bjc1ok5mkjua_large.jpg);
+            @include advertisement;
+            margin-top: 12px;
+            > div.text1 {
+              width: 100%;
+              height: 210px;
+              @include flexbox-1;
+              > h2 {
+                @include heading(28px, 400);
+                color: whitesmoke;
+                margin-top: 10px;
+              }
+              > div.text2 {
+                @include flexbox-2;
+                > a {
+                  @include link-1;
+                  &:hover {
+                    text-decoration: underline;
+                  }
+                  > i {
+                    font-size: 19px;
+                  }
+                }
+              }
+            }
+          }
+          > div.grid-1 {
+            width: 98.5%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 600px 600px 600px;
+            gap: 12px;
+            > div.grid-items {
+              @include advertisement;
+              margin-top: 12px;
+              margin-left: 12px;
+              > div.text1 {
+                width: 100%;
+                height: 170px;
+                @include flexbox-1;
+                > h1 {
+                  @include heading(40px, 600);
+                  color: whitesmoke;
+                }
+                > h2 {
+                  @include heading(21px, 400);
+                  color: whitesmoke;
+                }
+                > div.text2 {
+                  @include flexbox-2;
+                  > a {
+                    @include link-1;
+                    &:hover {
+                      text-decoration: underline;
+                    }
+                    > i {
+                      font-size: 19px;
+                    }
+                  }
+                }
+              }
+            }
+            > div.item-1 {
+              background-image: url(../images/promo_iphone14pro__4n4twj56fzmu_large.jpg);
+            }
+            > div.item-2 {
+              background-image: url(../images/promo_ipad__fioegapg12qi_large.jpg);
+              > div.text1 > h1 {
+                color: black;
+              }
+              > div.text1 > h2 {
+                color: black;
+              }
+            }
+            > div.item-3 {
+              background-image: url(../images/promo_apple_watch_ultra__gnsqulvdc4a6_large.jpg);
+              > div.text1 > h1 {
+                color: black;
+              }
+              > div.text1 > h2 {
+                color: black;
+                margin-top: 10px;
+              }
+            }
+            > div.item-4 {
+              background-image: url(../images/promo_airpods_pro_avail__gaxggskofx6y_large.jpg);
+            }
+            > div.item-5 {
+              background-image: url(../images/promo_macbookair__fywl7i82fueu_large.png);
+              > div.text1 > h1 {
+                color: black;
+              }
+              > div.text1 > h2 {
+                color: black;
+                margin-top: 10px;
+              }
+            }
+            > div.item-6 {
+              background-image: url(../images/tile__cauwwcyyn9hy_large.jpg);
+              > div.text1 > h1 {
+                color: black;
+              }
+              > div.text1 > h2 {
+                color: black;
+                margin-top: 10px;
+                text-align: center;
+              }
+            }
+          }
+          .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+          }
+          .swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+          .swiper-pagination {
+            position: relative;
+            top: 4px;
+          }
+        }
+        > footer {
+          background-color: #f5f5f7;
+          width: 100%;
+          margin-top: 20px;
+          padding-bottom: 30px;
+          > div.description {
+            width: 980px;
+            height: 170px;
+            padding: 17px 0 11px 0;
+            margin: 0 auto;
+            border-bottom: 1px solid #d2d2d7;
+            > p {
+              color: #939397;
+              font-size: 14px;
+              line-height: 1.33337;
+              font-weight: 400;
+              padding-bottom: 8px;
+              > a {
+                color: #464648;
+                &:hover {
+                  text-decoration: underline;
+                }
+              }
+            }
+          }
+          > div.list-items {
+            width: 980px;
+            margin: 20px auto;
+            display: flex;
+            justify-content: space-between;
+            > div > h3 {
+              font-size: 14px;
+              color: #434345;
+            }
+            > div > ul > li > a {
+              font-size: 12px;
+              color: #68686b;
+              &:hover {
+                text-decoration: underline;
+              }
+            }
+            > div > h3.mt {
+              margin-top: 20px;
+            }
+          }
+          > div.contact {
+            width: 980px;
+            margin: 10px auto;
+            color: #6e6e73;
+            > div.shop {
+              padding-bottom: 10px;
+              border-bottom: 1px solid #d2d2d7;
+              > p {
+                font-size: 14px;
+                > a {
+                  color: #2997ff;
+                  &:hover {
+                    text-decoration: underline;
+                  }
+                }
+              }
+            }
+            div.copyright {
+              display: flex;
+              font-size: 14px;
+              margin-top: 8px;
+              > p.reserved {
+                margin-right: 30px;
+              }
+              > div > a {
+                color: #464648;
+                &:hover {
+                  text-decoration: underline;
+                }
+              }
+              > div > a.border-right {
+                border-right: 1px solid #d2d2d7;
+                padding: 0 10px;
+              }
+              > div > a.ml {
+                margin-left: 10px;
+              }
+              > div > a.country {
+                margin-left: 120px;
+              }
+            }
+          }
+        }
+      }
+    }
+  } @else if ($value==$lg) {
+    @media screen and (min-width: $lg) and (max-width: $xl) {
+      body {
+        > header {
+          width: 100%;
+          height: 44px;
+          background-color: #323233fc;
+          position: fixed;
+          z-index: 10;
+          > nav {
+            width: inherit;
+            height: inherit;
+            > ul {
+              max-width: 980px;
+              height: inherit;
+              display: flex;
+              justify-content: space-between;
+              margin: 0 auto;
+              padding: 0 22px;
+              > li.hidden {
+                display: none;
+              }
+              > li {
+                width: fit-content;
+                height: inherit;
+                > a {
+                  display: block;
+                  height: inherit;
+                  padding: 0 8px;
+                }
+              }
+            }
+          }
+        }
+        > main {
+          width: 100%;
+          > div.iphone14 {
+            background-image: url(../images/hero_iphone14__fjmsqstr1ceq_medium.jpg);
+            @include advertisement;
+            > div.text1 {
+              width: 100%;
+              height: 220px;
+              @include flexbox-1;
+              > h1 {
+                @include heading(44px, 700);
+              }
+              > h2 {
+                @include heading(24px, 400);
+              }
+              > div.text2 {
+                @include flexbox-2;
+                > a {
+                  @include link-1;
+                  font-size: 19px;
+                  &:hover {
+                    text-decoration: underline;
+                  }
+                  > i {
+                    font-size: 19px;
+                  }
+                }
+              }
+            }
+          }
+          > div.gift {
+            background-image: url(../images/hero_endframe__8xosbwdvpaqe_medium.jpg);
+            margin-top: 12px;
+            @include advertisement;
+            > div {
+              @include flexbox-1;
+              height: 530px;
+              color: whitesmoke;
+              > h2 {
+                @include heading(48px, 600);
+              }
+              > h3 {
+                @include heading(24px, 400);
+                margin-bottom: 10px;
+              }
+              > a {
+                @include link-1;
+                font-size: 19px;
+                &:hover {
+                  text-decoration: underline;
+                }
+                > i {
+                  font-size: 19px;
+                }
+              }
+            }
+          }
+          > div.watch-s8 {
+            background-image: url(../images/hero_apple_watch_series_8__bjc1ok5mkjua_medium.jpg);
+            @include advertisement;
+            margin-top: 12px;
+            > div.text1 {
+              width: 100%;
+              height: 210px;
+              @include flexbox-1;
+              > h2 {
+                @include heading(24px, 400);
+                color: whitesmoke;
+                margin-top: 10px;
+              }
+              > div.text2 {
+                @include flexbox-2;
+                > a {
+                  @include link-1;
+                  font-size: 19px;
+                  &:hover {
+                    text-decoration: underline;
+                  }
+                  > i {
+                    font-size: 19px;
+                  }
+                }
+              }
+            }
+          }
+          > div.grid-1 {
+            width: 97.5%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 490px 490px 490px;
+            gap: 12px;
+            padding-bottom: 30px;
+            > div.grid-items {
+              @include advertisement;
+              height: 490px;
+              margin-top: 12px;
+              margin-left: 12px;
+              > div.text1 {
+                width: 100%;
+                height: 140px;
+                @include flexbox-1;
+                > h1 {
+                  @include heading(32px, 600);
+                  color: whitesmoke;
+                }
+                > h2 {
+                  @include heading(19px, 400);
+                  color: whitesmoke;
+                }
+                > div.text2 {
+                  @include flexbox-2;
+                  > a {
+                    @include link-1;
+                    font-size: 17px;
+                    &:hover {
+                      text-decoration: underline;
+                    }
+                    > i {
+                      font-size: 19px;
+                    }
+                  }
+                }
+              }
+            }
+            > div.item-1 {
+              background-image: url(../images/promo_iphone14pro__4n4twj56fzmu_medium.jpg);
+            }
+            > div.item-2 {
+              background-image: url(../images/promo_ipad__fioegapg12qi_medium.jpg);
+              > div.text1 > h1 {
+                color: black;
+              }
+              > div.text1 > h2 {
+                color: black;
+              }
+            }
+            > div.item-3 {
+              background-image: url(../images/promo_apple_watch_ultra__gnsqulvdc4a6_medium.jpg);
+              > div.text1 > h1 {
+                color: black;
+              }
+              > div.text1 > h2 {
+                color: black;
+                margin-top: 10px;
+              }
+            }
+            > div.item-4 {
+              background-image: url(../images/promo_airpods_pro_avail__gaxggskofx6y_medium.jpg);
+            }
+            > div.item-5 {
+              background-image: url(../images/promo_macbookair__fywl7i82fueu_medium.png);
+              > div.text1 > h1 {
+                color: black;
+              }
+              > div.text1 > h2 {
+                color: black;
+                margin-top: 10px;
+              }
+            }
+            > div.item-6 {
+              background-image: url(../images/tile__cauwwcyyn9hy_medium.jpg);
+              > div.text1 > h1 {
+                color: black;
+              }
+              > div.text1 > h2 {
+                color: black;
+                margin-top: 10px;
+                text-align: center;
+              }
+            }
+          }
+          .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+          }
+          .swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+          .swiper-pagination {
+            position: relative;
+            top: 4px;
+          }
+        }
+        > footer {
+          background-color: #f5f5f7;
+          width: 100%;
+          margin-top: 20px;
+          padding-bottom: 30px;
+          > div.description {
+            max-width: 930px;
+            height: 170px;
+            padding: 17px 0 11px 0;
+            margin: 0 auto;
+            border-bottom: 1px solid #d2d2d7;
+            > p {
+              color: #939397;
+              font-size: 14px;
+              line-height: 1.33337;
+              font-weight: 400;
+              padding-bottom: 8px;
+              > a {
+                color: #464648;
+                &:hover {
+                  text-decoration: underline;
+                }
+              }
+            }
+          }
+          > div.list-items {
+            max-width: 930px;
+            margin: 20px auto;
+            display: flex;
+            justify-content: space-between;
+            > div > h3 {
+              font-size: 14px;
+              color: #434345;
+            }
+            > div > ul > li > a {
+              font-size: 12px;
+              color: #68686b;
+              &:hover {
+                text-decoration: underline;
+              }
+            }
+            > div > h3.mt {
+              margin-top: 20px;
+            }
+          }
+          > div.contact {
+            max-width: 930px;
+            margin: 10px auto;
+            color: #6e6e73;
+            > div.shop {
+              padding-bottom: 10px;
+              border-bottom: 1px solid #d2d2d7;
+              > p {
+                font-size: 14px;
+                > a {
+                  color: #2997ff;
+                  &:hover {
+                    text-decoration: underline;
+                  }
+                }
+              }
+            }
+            div.copyright {
+              display: flex;
+              font-size: 14px;
+              margin-top: 8px;
+              > p.reserved {
+                margin-right: 30px;
+              }
+              > div > a {
+                color: #464648;
+                &:hover {
+                  text-decoration: underline;
+                }
+              }
+              > div > a.border-right {
+                border-right: 1px solid #d2d2d7;
+                padding: 0 10px;
+              }
+              > div > a.ml {
+                margin-left: 10px;
+              }
+              > div > a.country {
+                position: relative;
+                left: 69px;
+              }
+            }
+          }
+        }
+      }
+    }
+  } @else if ($value==$md) {
+    @media screen and (min-width: $md) and (max-width: $lg) {
+      body {
+        > header {
+          width: 100%;
+          height: 44px;
+          background-color: #323233fc;
+          position: fixed;
+          z-index: 10;
+          > nav {
+            width: inherit;
+            height: inherit;
+            > ul {
+              max-width: 980px;
+              height: inherit;
+              display: flex;
+              justify-content: space-between;
+              margin: 0 auto;
+              padding: 0 22px;
+              > li {
+                width: fit-content;
+                height: inherit;
+                &:not(.visible) {
+                  display: none;
+                }
+                > a {
+                  display: block;
+                  height: inherit;
+                  padding: 0 8px;
+                  > i {
+                    display: block;
+                    color: whitesmoke;
+                    position: relative;
+                    top: 9px;
+                  }
+                }
+                > div.submenu {
+                  display: none;
+                  width: 100%;
+                  height: 100vh;
+                  background-color: #000000;
+                  position: absolute;
+                  top: 44px;
+                  left: 0;
+                  > header {
+                    height: 60px;
+                    border-bottom: 1px solid #68686b;
+                    > div.search {
+                      max-width: 575px;
+                      margin: 20px auto;
+                      > div.search-1 {
+                        height: 36px;
+                        background-color: #1d1d1f;
+                        display: flex;
+                        align-items: center;
+                        border-radius: 7px;
+                        > input {
+                          width: 560px;
+                          height: inherit;
+                          background-color: unset;
+                          border: unset;
+                          outline-style: unset;
+                          color: whitesmoke;
+                          margin-left: 10px;
+                          font-size: 18px;
+                        }
+                        > svg {
+                          margin-left: 10px;
+                        }
+                      }
+                    }
+                  }
+                  > ul {
+                    max-width: 570px;
+                    margin: 0 auto;
+                    > li {
+                      width: inherit;
+                      height: 44px;
+                      border-bottom: 1px solid #68686b;
+                      > a {
+                        color: #939397;
+                        display: block;
+                        height: 44px;
+                        line-height: 44px;
+                        font-size: 18px;
+                        &:hover {
+                          color: whitesmoke;
+                        }
+                      }
+                    }
+                    > li.border-unset {
+                      border-bottom: unset;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+        > main {
+          width: 100%;
+          > div.iphone14 {
+            background-image: url(../images/hero_iphone14__fjmsqstr1ceq_medium.jpg);
+            @include advertisement;
+            > div.text1 {
+              width: 100%;
+              height: 220px;
+              @include flexbox-1;
+              > h1 {
+                @include heading(44px, 700);
+              }
+              > h2 {
+                @include heading(24px, 400);
+              }
+              > div.text2 {
+                @include flexbox-2;
+                > a {
+                  @include link-1;
+                  font-size: 19px;
+                  &:hover {
+                    text-decoration: underline;
+                  }
+                  > i {
+                    font-size: 17px;
+                  }
+                }
+              }
+            }
+          }
+          > div.gift {
+            background-image: url(../images/hero_endframe__8xosbwdvpaqe_medium.jpg);
+            margin-top: 12px;
+            @include advertisement;
+            > div {
+              @include flexbox-1;
+              height: 530px;
+              color: whitesmoke;
+              > h2 {
+                @include heading(48px, 600);
+              }
+              > h3 {
+                @include heading(24px, 400);
+                margin-bottom: 10px;
+              }
+              > a {
+                @include link-1;
+                font-size: 19px;
+                &:hover {
+                  text-decoration: underline;
+                }
+                > i {
+                  font-size: 17px;
+                }
+              }
+            }
+          }
+          > div.watch-s8 {
+            background-image: url(../images/hero_apple_watch_series_8__bjc1ok5mkjua_medium.jpg);
+            @include advertisement;
+            margin-top: 12px;
+            > div.text1 {
+              width: 100%;
+              height: 210px;
+              @include flexbox-1;
+              > h2 {
+                @include heading(24px, 400);
+                color: whitesmoke;
+                margin-top: 10px;
+              }
+              > div.text2 {
+                @include flexbox-2;
+                > a {
+                  @include link-1;
+                  font-size: 19px;
+                  &:hover {
+                    text-decoration: underline;
+                  }
+                  > i {
+                    font-size: 17px;
+                  }
+                }
+              }
+            }
+          }
+          > div.grid-1 {
+            width: 97.5%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 490px 490px 490px;
+            gap: 12px;
+            padding-bottom: 30px;
+            > div.grid-items {
+              @include advertisement;
+              height: 490px;
+              margin-top: 12px;
+              margin-left: 12px;
+              > div.text1 {
+                width: 100%;
+                height: 140px;
+                @include flexbox-1;
+                > h1 {
+                  @include heading(32px, 600);
+                  color: whitesmoke;
+                }
+                > h2 {
+                  @include heading(19px, 400);
+                  color: whitesmoke;
+                }
+                > div.text2 {
+                  @include flexbox-2;
+                  > a {
+                    @include link-1;
+                    font-size: 17px;
+                    &:hover {
+                      text-decoration: underline;
+                    }
+                    > i {
+                      font-size: 15px;
+                    }
+                  }
+                }
+              }
+            }
+            > div.item-1 {
+              background-image: url(../images/promo_iphone14pro__4n4twj56fzmu_medium.jpg);
+            }
+            > div.item-2 {
+              background-image: url(../images/promo_ipad__fioegapg12qi_medium.jpg);
+              > div.text1 > h1 {
+                color: black;
+              }
+              > div.text1 > h2 {
+                color: black;
+              }
+            }
+            > div.item-3 {
+              background-image: url(../images/promo_apple_watch_ultra__gnsqulvdc4a6_medium.jpg);
+              > div.text1 > h1 {
+                color: black;
+              }
+              > div.text1 > h2 {
+                color: black;
+                margin-top: 10px;
+              }
+            }
+            > div.item-4 {
+              background-image: url(../images/promo_airpods_pro_avail__gaxggskofx6y_medium.jpg);
+            }
+            > div.item-5 {
+              background-image: url(../images/promo_macbookair__fywl7i82fueu_medium.png);
+              > div.text1 > h1 {
+                color: black;
+              }
+              > div.text1 > h2 {
+                color: black;
+                margin-top: 10px;
+              }
+            }
+            > div.item-6 {
+              background-image: url(../images/tile__cauwwcyyn9hy_medium.jpg);
+              > div.text1 > h1 {
+                color: black;
+              }
+              > div.text1 > h2 {
+                color: black;
+                margin-top: 10px;
+                text-align: center;
+              }
+            }
+          }
+          .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+          }
+          .swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+          .swiper-pagination {
+            position: relative;
+            top: 4px;
+          }
+        }
+        > footer {
+          background-color: #f5f5f7;
+          width: 100%;
+          margin-top: 20px;
+          padding-bottom: 30px;
+          > div.description {
+            max-width: 720px;
+            height: 170px;
+            padding: 17px 0 11px 0;
+            margin: 0 auto;
+            border-bottom: 1px solid #d2d2d7;
+            > p {
+              color: #939397;
+              font-size: 14px;
+              line-height: 1.33337;
+              font-weight: 400;
+              padding-bottom: 8px;
+              > a {
+                color: #464648;
+                &:hover {
+                  text-decoration: underline;
+                }
+              }
+            }
+          }
+          > div.list-items {
+            max-width: 720px;
+            margin: 20px auto;
+            display: flex;
+            justify-content: space-between;
+            > div > h3 {
+              font-size: 14px;
+              color: #434345;
+            }
+            > div > ul > li > a {
+              font-size: 12px;
+              color: #68686b;
+              &:hover {
+                text-decoration: underline;
+              }
+            }
+            > div > h3.mt {
+              margin-top: 20px;
+            }
+          }
+          > div.contact {
+            max-width: 720px;
+            margin: 10px auto;
+            color: #6e6e73;
+            > div.shop {
+              padding-bottom: 10px;
+              border-bottom: 1px solid #d2d2d7;
+              > p {
+                font-size: 14px;
+                > a {
+                  color: #2997ff;
+                  &:hover {
+                    text-decoration: underline;
+                  }
+                }
+              }
+            }
+            div.copyright {
+              display: flex;
+              font-size: 12px;
+              margin-top: 8px;
+              flex-wrap: wrap;
+              > p.reserved {
+                margin-right: 10px;
+              }
+              > div > a {
+                color: #464648;
+                &:hover {
+                  text-decoration: underline;
+                }
+              }
+              > div > a.border-right {
+                border-right: 1px solid #d2d2d7;
+                padding: 0 10px;
+              }
+              > div > a.ml {
+                margin-left: 10px;
+              }
+              > div > a.country {
+                position: relative;
+                top: 20px;
+              }
+            }
+          }
+        }
+      }
+    }
+  } @else if ($value==$sm) {
+    @media screen and (min-width: $sm) and (max-width: $md) {
+      body {
+        > header {
+          width: 100%;
+          height: 44px;
+          background-color: #323233fc;
+          position: fixed;
+          z-index: 10;
+          > nav {
+            width: inherit;
+            height: inherit;
+            > ul {
+              max-width: 980px;
+              height: inherit;
+              display: flex;
+              justify-content: space-between;
+              margin: 0 auto;
+              padding: 0 22px;
+              > li {
+                width: fit-content;
+                height: inherit;
+                &:not(.visible) {
+                  display: none;
+                }
+                > a {
+                  display: block;
+                  height: inherit;
+                  padding: 0 8px;
+                  > i {
+                    display: block;
+                    color: whitesmoke;
+                    position: relative;
+                    top: 9px;
+                  }
+                }
+                > div.submenu {
+                  display: none;
+                  width: 100%;
+                  height: 100vh;
+                  background-color: #000000;
+                  position: absolute;
+                  top: 44px;
+                  left: 0;
+                  > header {
+                    height: 60px;
+                    border-bottom: 1px solid #68686b;
+                    > div.search {
+                      max-width: 575px;
+                      margin: 20px auto;
+                      padding: 0 10px;
+                      > div.search-1 {
+                        height: 36px;
+                        background-color: #1d1d1f;
+                        display: flex;
+                        align-items: center;
+                        border-radius: 7px;
+                        > input {
+                          width: 560px;
+                          height: inherit;
+                          background-color: unset;
+                          border: unset;
+                          outline-style: unset;
+                          color: whitesmoke;
+                          margin-left: 10px;
+                          font-size: 18px;
+                        }
+                        > svg {
+                          margin-left: 10px;
+                        }
+                      }
+                    }
+                  }
+                  > ul {
+                    max-width: 570px;
+                    margin: 0 auto;
+                    padding:10px 40px;
+                    > li {
+                      width: inherit;
+                      height: 44px;
+                      border-bottom: 1px solid #68686b;
+                      > a {
+                        color: #939397;
+                        display: block;
+                        height: 44px;
+                        line-height: 44px;
+                        font-size: 18px;
+                        &:hover {
+                          color: whitesmoke;
+                        }
+                      }
+                    }
+                    > li.border-unset {
+                      border-bottom: unset;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+        > main {
+          width: 100%;
+          > div.iphone14 {
+            background-image: url(../images/hero_iphone14__fjmsqstr1ceq_medium.jpg);
+            @include advertisement;
+            > div.text1 {
+              width: 100%;
+              height: 190px;
+              @include flexbox-1;
+              > h1 {
+                @include heading(32px, 600);
+              }
+              > h2 {
+                @include heading(20px, 200);
+              }
+              > div.text2 {
+                @include flexbox-2;
+                > a {
+                  @include link-1;
+                  font-size: 17px;
+                  &:hover {
+                    text-decoration: underline;
+                  }
+                  > i {
+                    font-size: 15px;
+                  }
+                }
+              }
+            }
+          }
+          > div.gift {
+            background-image: url(../images/hero_endframe__8xosbwdvpaqe_medium.jpg);
+            margin-top: 12px;
+            @include advertisement;
+            > div {
+              @include flexbox-1;
+              height: 530px;
+              color: whitesmoke;
+              > h2 {
+                @include heading(32px, 600);
+              }
+              > h3 {
+                @include heading(18px, 400);
+                margin-bottom: 10px;
+                width: 220px;
+                text-align: center                
+              }
+              > a {
+                @include link-1;
+                font-size: 17px;
+                &:hover {
+                  text-decoration: underline;
+                }
+                > i {
+                  font-size: 15px;
+                }
+              }
+            }
+          }
+          > div.watch-s8 {
+            background-image: url(../images/hero_apple_watch_series_8__bjc1ok5mkjua_medium.jpg);
+            @include advertisement;
+            margin-top: 12px;
+            > div.text1 {
+              width: 100%;
+              height: 210px;
+              @include flexbox-1;
+              > h2 {
+                @include heading(20px, 400);
+                color: whitesmoke;
+                margin-top: 10px;
+              }
+              > div.text2 {
+                @include flexbox-2;
+                > a {
+                  @include link-1;
+                  font-size: 17px;
+                  &:hover {
+                    text-decoration: underline;
+                  }
+                  > i {
+                    font-size: 15px;
+                  }
+                }
+              }
+            }
+          }
+          > div.grid-1 {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(6,1fr) ;
+            padding-bottom: 30px;
+            > div.grid-items {
+              @include advertisement;
+              height: 490px;
+              margin-top: 12px;
+              > div.text1 {
+                width: 100%;
+                height: 140px;
+                @include flexbox-1;
+                > h1 {
+                  @include heading(32px, 600);
+                  color: whitesmoke;
+                }
+                > h2 {
+                  @include heading(19px, 400);
+                  color: whitesmoke;
+                }
+                > div.text2 {
+                  @include flexbox-2;
+                  > a {
+                    @include link-1;
+                    font-size: 17px;
+                    &:hover {
+                      text-decoration: underline;
+                    }
+                    > i {
+                      font-size: 15px;
+                    }
+                  }
+                }
+              }
+            }
+            > div.item-1 {
+              background-image: url(../images/promo_iphone14pro__4n4twj56fzmu_medium.jpg);
+              background-size: cover;
+            }
+            > div.item-2 {
+              background-image: url(../images/promo_ipad__fioegapg12qi_medium.jpg);
+              background-size: cover;
+              > div.text1 > h1 {
+                color: black;
+              }
+              > div.text1 > h2 {
+                color: black;
+              }
+            }
+            > div.item-3 {
+              background-image: url(../images/promo_apple_watch_ultra__gnsqulvdc4a6_medium.jpg);
+              background-size: cover;
+              > div.text1 > h1 {
+                color: black;
+              }
+              > div.text1 > h2 {
+                color: black;
+                margin-top: 10px;
+              }
+            }
+            > div.item-4 {
+              background-image: url(../images/promo_airpods_pro_avail__gaxggskofx6y_medium.jpg);
+              background-size: cover;
+            }
+            > div.item-5 {
+              background-image: url(../images/promo_macbookair__fywl7i82fueu_medium.png);
+              background-size: cover;
+              > div.text1 > h1 {
+                color: black;
+              }
+              > div.text1 > h2 {
+                color: black;
+                margin-top: 10px;
+              }
+            }
+            > div.item-6 {
+              background-image: url(../images/tile__cauwwcyyn9hy_medium.jpg);
+              background-size: cover;
+              > div.text1 > h1 {
+                color: black;
+              }
+              > div.text1 > h2 {
+                color: black;
+                margin-top: 10px;
+                text-align: center;
+              }
+            }
+          }
+          .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+          }
+          .swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+          .swiper-pagination {
+            position: relative;
+            top: 4px;
+          }
+        }
+        > footer {
+          background-color: #f5f5f7;
+          width: 100%;
+          margin-top: 20px;
+          padding-bottom: 30px;
+          > div.description {
+            max-width: 530px;
+            height: 170px;
+            padding: 17px 0 11px 0;
+            margin: 0 auto;
+            border-bottom: 1px solid #d2d2d7;
+            > p {
+              color: #939397;
+              font-size: 12px;
+              line-height: 1.33337;
+              font-weight: 400;
+              padding-bottom: 8px;
+              > a {
+                color: #464648;
+                &:hover {
+                  text-decoration: underline;
+                }
+              }
+            }
+          }
+          > div.list-items {
+            max-width: 530px;
+            margin: 20px auto;
+            display: flex;
+            justify-content: space-between;
+            > div > h3 {
+              font-size: 14px;
+              color: #434345;
+            }
+            > div > ul > li > a {
+              font-size: 12px;
+              color: #68686b;
+              &:hover {
+                text-decoration: underline;
+              }
+            }
+            > div > h3.mt {
+              margin-top: 20px;
+            }
+          }
+          > div.contact {
+            max-width: 530px;
+            margin: 10px auto;
+            color: #6e6e73;
+            > div.shop {
+              padding-bottom: 10px;
+              border-bottom: 1px solid #d2d2d7;
+              > p {
+                font-size: 14px;
+                > a {
+                  color: #2997ff;
+                  &:hover {
+                    text-decoration: underline;
+                  }
+                }
+              }
+            }
+            div.copyright {
+              display: flex;
+              font-size: 12px;
+              margin-top: 8px;
+              flex-wrap: wrap;
+              > p.reserved {
+                margin-right: 10px;
+              }
+              > div > a {
+                color: #464648;
+                &:hover {
+                  text-decoration: underline;
+                }
+              }
+              > div > a.border-right {
+                border-right: 1px solid #d2d2d7;
+                padding: 0 10px;
+              }
+              > div > a.ml {
+                margin-left: 10px;
+              }
+              > div > a.country {
+                position: relative;
+                top: 25px;
+                right: 222px;
+              }
+            }
+          }
+        }
+      }
+    }
+  } @else {
+    @media screen and (max-width: $sm) {
+      body {
+        > header {
+          width: 100%;
+          height: 44px;
+          background-color: #323233fc;
+          position: fixed;
+          z-index: 10;
+          > nav {
+            width: inherit;
+            height: inherit;
+            > ul {
+              max-width: 980px;
+              height: inherit;
+              display: flex;
+              justify-content: space-between;
+              margin: 0 auto;
+              padding: 0 22px;
+              > li {
+                width: fit-content;
+                height: inherit;
+                &:not(.visible) {
+                  display: none;
+                }
+                > a {
+                  display: block;
+                  height: inherit;
+                  padding: 0 8px;
+                  > i {
+                    display: block;
+                    color: whitesmoke;
+                    position: relative;
+                    top: 9px;
+                  }
+                }
+                > div.submenu {
+                  display: none;
+                  width: 100%;
+                  height: 100vh;
+                  background-color: #000000;
+                  position: absolute;
+                  top: 44px;
+                  left: 0;
+                  > header {
+                    height: 60px;
+                    border-bottom: 1px solid #68686b;
+                    > div.search {
+                      max-width: 575px;
+                      margin: 20px auto;
+                      padding: 0 10px;
+                      > div.search-1 {
+                        height: 36px;
+                        background-color: #1d1d1f;
+                        display: flex;
+                        align-items: center;
+                        border-radius: 7px;
+                        > input {
+                          width: 560px;
+                          height: inherit;
+                          background-color: unset;
+                          border: unset;
+                          outline-style: unset;
+                          color: whitesmoke;
+                          margin-left: 10px;
+                          font-size: 18px;
+                        }
+                        > svg {
+                          margin-left: 10px;
+                        }
+                      }
+                    }
+                  }
+                  > ul {
+                    max-width: 570px;
+                    margin: 0 auto;
+                    padding:10px 40px;
+                    > li {
+                      width: inherit;
+                      height: 44px;
+                      border-bottom: 1px solid #68686b;
+                      > a {
+                        color: #939397;
+                        display: block;
+                        height: 44px;
+                        line-height: 44px;
+                        font-size: 18px;
+                        &:hover {
+                          color: whitesmoke;
+                        }
+                      }
+                    }
+                    > li.border-unset {
+                      border-bottom: unset;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+        > main {
+          width: 100%;
+          > div.iphone14 {
+            background-image: url(../images/hero_iphone14__fjmsqstr1ceq_medium.jpg);
+            @include advertisement;
+            > div.text1 {
+              width: 100%;
+              height: 190px;
+              @include flexbox-1;
+              > h1 {
+                @include heading(32px, 600);
+              }
+              > h2 {
+                @include heading(20px, 200);
+              }
+              > div.text2 {
+                @include flexbox-2;
+                > a {
+                  @include link-1;
+                  font-size: 17px;
+                  &:hover {
+                    text-decoration: underline;
+                  }
+                  > i {
+                    font-size: 15px;
+                  }
+                }
+              }
+            }
+          }
+          > div.gift {
+            background-image: url(../images/hero_endframe__8xosbwdvpaqe_medium.jpg);
+            margin-top: 12px;
+            @include advertisement;
+            > div {
+              @include flexbox-1;
+              height: 530px;
+              color: whitesmoke;
+              > h2 {
+                @include heading(32px, 600);
+              }
+              > h3 {
+                @include heading(18px, 400);
+                margin-bottom: 10px;
+                width: 220px;
+                text-align: center                
+              }
+              > a {
+                @include link-1;
+                font-size: 17px;
+                &:hover {
+                  text-decoration: underline;
+                }
+                > i {
+                  font-size: 15px;
+                }
+              }
+            }
+          }
+          > div.watch-s8 {
+            background-image: url(../images/hero_apple_watch_series_8__bjc1ok5mkjua_medium.jpg);
+            @include advertisement;
+            margin-top: 12px;
+            > div.text1 {
+              width: 100%;
+              height: 210px;
+              @include flexbox-1;
+              > h2 {
+                @include heading(20px, 400);
+                color: whitesmoke;
+                margin-top: 10px;
+              }
+              > div.text2 {
+                @include flexbox-2;
+                > a {
+                  @include link-1;
+                  font-size: 17px;
+                  &:hover {
+                    text-decoration: underline;
+                  }
+                  > i {
+                    font-size: 15px;
+                  }
+                }
+              }
+            }
+          }
+          > div.grid-1 {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(6,1fr) ;
+            padding-bottom: 30px;
+            > div.grid-items {
+              @include advertisement;
+              height: 490px;
+              margin-top: 12px;
+              > div.text1 {
+                width: 100%;
+                height: 140px;
+                @include flexbox-1;
+                > h1 {
+                  @include heading(32px, 600);
+                  color: whitesmoke;
+                }
+                > h2 {
+                  @include heading(19px, 400);
+                  color: whitesmoke;
+                }
+                > div.text2 {
+                  @include flexbox-2;
+                  > a {
+                    @include link-1;
+                    font-size: 17px;
+                    &:hover {
+                      text-decoration: underline;
+                    }
+                    > i {
+                      font-size: 15px;
+                    }
+                  }
+                }
+              }
+            }
+            > div.item-1 {
+              background-image: url(../images/promo_iphone14pro__4n4twj56fzmu_medium.jpg);
+              background-size: cover;
+            }
+            > div.item-2 {
+              background-image: url(../images/promo_ipad__fioegapg12qi_medium.jpg);
+              background-size: cover;
+              > div.text1 > h1 {
+                color: black;
+              }
+              > div.text1 > h2 {
+                color: black;
+              }
+            }
+            > div.item-3 {
+              background-image: url(../images/promo_apple_watch_ultra__gnsqulvdc4a6_medium.jpg);
+              background-size: cover;
+              > div.text1 > h1 {
+                color: black;
+              }
+              > div.text1 > h2 {
+                color: black;
+                margin-top: 10px;
+              }
+            }
+            > div.item-4 {
+              background-image: url(../images/promo_airpods_pro_avail__gaxggskofx6y_medium.jpg);
+              background-size: cover;
+            }
+            > div.item-5 {
+              background-image: url(../images/promo_macbookair__fywl7i82fueu_medium.png);
+              background-size: cover;
+              > div.text1 > h1 {
+                color: black;
+              }
+              > div.text1 > h2 {
+                color: black;
+                margin-top: 10px;
+              }
+            }
+            > div.item-6 {
+              background-image: url(../images/tile__cauwwcyyn9hy_medium.jpg);
+              background-size: cover;
+              > div.text1 > h1 {
+                color: black;
+              }
+              > div.text1 > h2 {
+                color: black;
+                margin-top: 10px;
+                text-align: center;
+              }
+            }
+          }
+          .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+          }
+          .swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+          .swiper-pagination {
+            position: relative;
+            top: 4px;
+          }
+        }
+        > footer {
+          background-color: #f5f5f7;
+          width: 100%;
+          margin-top: 20px;
+          padding-bottom: 30px;
+          > div.description {
+            max-width: 450px;
+            height: 170px;
+            padding: 17px 0 11px 0;
+            margin: 0 auto;
+            border-bottom: 1px solid #d2d2d7;
+            > p {
+              color: #939397;
+              font-size: 12px;
+              line-height: 1.33337;
+              font-weight: 400;
+              padding-bottom: 8px;
+              > a {
+                color: #464648;
+                &:hover {
+                  text-decoration: underline;
+                }
+              }
+            }
+          }
+          > div.list-items {
+            max-width: 450px;
+            margin: 20px auto;
+            display: flex;
+            justify-content: space-between;
+            > div > h3 {
+              font-size: 14px;
+              color: #434345;
+            }
+            > div > ul > li > a {
+              font-size: 12px;
+              color: #68686b;
+              &:hover {
+                text-decoration: underline;
+              }
+            }
+            > div > h3.mt {
+              margin-top: 20px;
+            }
+          }
+          > div.contact {
+            max-width: 450px;
+            margin: 10px auto;
+            color: #6e6e73;
+            > div.shop {
+              padding-bottom: 10px;
+              border-bottom: 1px solid #d2d2d7;
+              > p {
+                font-size: 14px;
+                > a {
+                  color: #2997ff;
+                  &:hover {
+                    text-decoration: underline;
+                  }
+                }
+              }
+            }
+            div.copyright {
+              display: flex;
+              font-size: 12px;
+              margin-top: 8px;
+              flex-wrap: wrap;
+              > p.reserved {
+                margin-right: 10px;
+              }
+              > div > a {
+                color: #464648;
+                &:hover {
+                  text-decoration: underline;
+                }
+              }
+              > div > a.border-right {
+                border-right: 1px solid #d2d2d7;
+                padding: 0 10px;
+              }
+              > div > a.ml {
+                margin-left: 10px;
+              }
+              > div > a.country {
+                position: relative;
+                top: 25px;
+                right: 222px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
